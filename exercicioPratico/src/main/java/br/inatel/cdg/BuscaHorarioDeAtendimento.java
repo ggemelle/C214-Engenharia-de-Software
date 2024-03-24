@@ -44,4 +44,15 @@ public class BuscaHorarioDeAtendimento {
             return false;
         }
     }
-}
+
+    public boolean verificarPredioProfessor(String nomeDoProfessor){
+        boolean predioProfessor = horarioDeAtendimentoService.getPredio().equals(nomeDoProfessor);
+
+        if (predioProfessor){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}   
