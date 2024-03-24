@@ -33,4 +33,15 @@ public class BuscaHorarioDeAtendimento {
             return false;
         }
     }
+
+    public boolean verificarNomeDoProfessor(String nomeDoProfessor){
+        boolean nomeDoProfessorExistente = horarioDeAtendimentoService.getNomeDoProfessor().equals(nomeDoProfessor);
+
+        if (nomeDoProfessorExistente){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
