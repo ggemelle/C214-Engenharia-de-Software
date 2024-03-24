@@ -86,4 +86,44 @@ public class MockHorarioDeAtendimentoService implements HorarioDeAtendimentoServ
             return "Inexistente";
         }
     }
+
+    @Override
+    public String getPredio() {
+        if (verificarPredioProfessor("Chris")){
+            return "3";
+        }else if (verificarPredioProfessor("RenZo")){
+            return "4";
+        }else if (verificarPredioProfessor("Aquino")){
+            return "2";
+        }else if (verificarPredioProfessor("Marcelo")){
+            return "1";
+        }else if (verificarPredioProfessor("Samuel")){
+            return "1";
+        }else if (verificarPredioProfessor("Soned")){
+            return "5";
+        }else if (verificarPredioProfessor("Renan")){
+            return "1";
+        }else{
+            return "Inexistente";
+        }
+    }
+
+    @Override
+    public boolean verificarPredioProfessor(String nomeDoProfesor) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Chris");
+        list.add("RenZo");
+        list.add("Aquino");
+        list.add("Marcelo");
+        list.add("Samuel");
+        list.add("Soned");
+        list.add("Renan");
+
+        for (int i=0; i < list.size(); i++){
+            if (list.get(i).equals(nomeDoProfesor) || list.get(i).equals(nomeDoProfesor)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
