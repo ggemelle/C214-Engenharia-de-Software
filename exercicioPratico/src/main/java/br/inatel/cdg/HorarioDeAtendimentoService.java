@@ -9,4 +9,8 @@ public interface HorarioDeAtendimentoService {
     public String getNomeDoProfessor();
 
     public boolean verificarNomeDoProfessor(String nomeDoProfessor);
+
+    public String getPredio();
+
+    public boolean verificarPredioProfessor(String nomeDoProfessor);
 }
