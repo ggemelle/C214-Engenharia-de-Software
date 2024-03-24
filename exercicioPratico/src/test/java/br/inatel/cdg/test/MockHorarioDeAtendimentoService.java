@@ -41,11 +41,49 @@ public class MockHorarioDeAtendimentoService implements HorarioDeAtendimentoServ
         for (int i=0; i < list.size(); i++){
             if (list.get(i).equals(nomeDoProfesor) || list.get(i).equals(nomeDoProfesor)){
                 return true;
-            }else{
-                return false;
             }
         }
-
         return false;
+    }
+
+    @Override
+    public boolean verificarNomeDoProfessor(String nomeDoProfesor) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Chris");
+        list.add("RenZo");
+        list.add("Aquino");
+        list.add("Marcelo");
+        list.add("Samuel");
+        list.add("Soned");
+        list.add("Renan");
+
+        for (int i=0; i < list.size(); i++){
+            if (list.get(i).equals(nomeDoProfesor) || list.get(i).equals(nomeDoProfesor)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public String getNomeDoProfessor() {
+        
+        if (verificarNomeDoProfessor("Chris")){
+            return "Chris";
+        }else if (verificarNomeDoProfessor("RenZo")){
+            return "RenZo";
+        }else if (verificarNomeDoProfessor("Aquino")){
+            return "Aquino";
+        }else if (verificarNomeDoProfessor("Marcelo")){
+            return "Marcelo";
+        }else if (verificarNomeDoProfessor("Samuel")){
+            return "Samuel";
+        }else if (verificarNomeDoProfessor("Soned")){
+            return "Soned";
+        }else if (verificarNomeDoProfessor("Renan")){
+            return "Renan";
+        }else{
+            return "Inexistente";
+        }
     }
 }
