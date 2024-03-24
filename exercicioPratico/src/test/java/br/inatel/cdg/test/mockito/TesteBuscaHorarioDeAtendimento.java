@@ -91,4 +91,58 @@ public class TesteBuscaHorarioDeAtendimento {
         Mockito.when(horarioDeAtendimentoService.getNomeDoProfessor()).thenReturn("Samuel");
         assertFalse(buscaHorarioDeAtendimento.verificarNomeDoProfessor("RenZo"));
     }
+
+    @Test
+    public void testeNomeInexistenteFalse(){
+        Mockito.when(horarioDeAtendimentoService.getNomeDoProfessor()).thenReturn("Inexistente");
+        assertFalse(buscaHorarioDeAtendimento.verificarNomeDoProfessor("RenZo"));
+    }
+
+    @Test
+    public void testePredioChrisFalse(){
+        Mockito.when(horarioDeAtendimentoService.getPredio()).thenReturn("3");
+        assertFalse(buscaHorarioDeAtendimento.verificarPredioProfessor("RenZo"));
+    }
+
+    @Test
+    public void testePredioRenZoFalse(){
+        Mockito.when(horarioDeAtendimentoService.getPredio()).thenReturn("4");
+        assertFalse(buscaHorarioDeAtendimento.verificarPredioProfessor("Chris"));
+    }
+
+    @Test
+    public void testePredioRenanFalse(){
+        Mockito.when(horarioDeAtendimentoService.getPredio()).thenReturn("1");
+        assertFalse(buscaHorarioDeAtendimento.verificarPredioProfessor("RenZo"));
+    }
+
+    @Test
+    public void testePredioSonedFalse(){
+        Mockito.when(horarioDeAtendimentoService.getPredio()).thenReturn("5");
+        assertFalse(buscaHorarioDeAtendimento.verificarPredioProfessor("RenZo"));
+    }
+
+    @Test
+    public void testePredioAquinoFalse(){
+        Mockito.when(horarioDeAtendimentoService.getPredio()).thenReturn("2");
+        assertFalse(buscaHorarioDeAtendimento.verificarPredioProfessor("RenZo"));
+    }
+
+    @Test
+    public void testePredioMarceloFalse(){
+        Mockito.when(horarioDeAtendimentoService.getPredio()).thenReturn("4");
+        assertFalse(buscaHorarioDeAtendimento.verificarPredioProfessor("RenZo"));
+    }
+
+    @Test
+    public void testePredioSamuelFalse(){
+        Mockito.when(horarioDeAtendimentoService.getPredio()).thenReturn("2");
+        assertFalse(buscaHorarioDeAtendimento.verificarPredioProfessor("RenZo"));
+    }
+
+    @Test
+    public void testePredioInexistenteFalse(){
+        Mockito.when(horarioDeAtendimentoService.getPredio()).thenReturn("NULL");
+        assertFalse(buscaHorarioDeAtendimento.verificarPredioProfessor("RenZo"));
+    }
 }
