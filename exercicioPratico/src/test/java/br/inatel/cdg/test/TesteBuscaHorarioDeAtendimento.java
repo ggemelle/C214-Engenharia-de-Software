@@ -86,5 +86,19 @@ public class TesteBuscaHorarioDeAtendimento {
         assertEquals("Inexistente", ynoguti.getnomeDoProfessor());
     }
 
-    
+    @Test
+    public void testeBuscaFalse(){
+        // Faz a busca de um professor que não existe
+        boolean horarioDeAtendimentoExistente = buscaHorarioDeAtendimento.verificarArrayListExistente("Ynoguti");
+        
+        assertFalse(horarioDeAtendimentoExistente);  
+    }
+
+    @Test
+    public void testeBuscaTrue(){
+        // Faz a busca de um professor que existe
+        boolean horarioDeAtendimentoExistente = buscaHorarioDeAtendimento.verificarArrayListExistente("Renan");
+        
+        assertTrue(horarioDeAtendimentoExistente);  
+    }
 }
