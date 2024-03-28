@@ -38,9 +38,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Set up JDK 19
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           java-version: '19'
           distribution: 'temurin'
@@ -48,7 +48,6 @@ jobs:
       - name: Test with Maven
         run: |
           cd exercicioPratico
-          cd src
           mvn clean test site
 
 
