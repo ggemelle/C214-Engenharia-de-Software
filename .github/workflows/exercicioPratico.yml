@@ -32,17 +32,17 @@ jobs:
         cd exercicioPratico
         mvn clean install
     
-        
+
   test:
 
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK 19
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
         with:
-          java-version: '19'
+          java-version: '17'
           distribution: 'temurin'
           cache: maven
       - name: Test with Maven
@@ -57,16 +57,16 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-          MAIL_TO: lucas.martha@ges.inatel.br
+          MAIL_TO: gabriel.leal@gec.inatel.br
           MAIL_SUBJECT: Rodando Pipeline
           MAIL_BODY: Pipeline executado!
 
     steps:
       - uses: actions/checkout@v4
-      - name: Set up JDK 17
+      - name: Set up JDK 19
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '19'
           distribution: 'temurin'
           cache: maven
       - name: Notification
