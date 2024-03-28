@@ -47,7 +47,7 @@ jobs:
           cache: maven
       - name: Test with Maven
         run: |
-          cd exercicioPratico/src/test
+          cd exercicioPratico\src\test\java\br\inatel\cdg\test
           mvn clean test site
 
 
